@@ -1,4 +1,48 @@
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.logo img{
+  display: flex;
+  width: 50%;
+  margin: auto;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	position: fixed;
+  padding: 5px;
+	left: 0;
+	top: 0;
+	width:100%;
+	z-index: 1;
+  background-color: white;
+  transition: 0.6s ease-in-out;
+}
+
+#login{
+  background-color:  #3EB489;
+  color: white;
+  margin: 5px;
+  padding: 5px 10px;
+}
+
+.quote{
+  background-color: #3EB489;
+}
+
+.searchbar{
+  background-color: white;
+  padding-top: 20px;
+}
+
+#src-button{
+ margin-left: 20px ;
+ color: white;
+ background-color: #3EB489;
+ border: none;
+}
+
+form.form-inline input[type=text] {
+  width: 380px;
+  border-radius: 20px;
+  text-align: center;
 }

@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import Navbar from "./Navbar";
 import Card from "./Card";
 import Category from "./Category";
+import Footer from "./Footer";
 
 
 function Header(){
@@ -56,8 +57,10 @@ function Header(){
             </div>
 
             <div className="card-container">
-                <Category/>
+                <Category/><br></br>
             </div>
+
+            <Footer/>
         </div>
     )
 }

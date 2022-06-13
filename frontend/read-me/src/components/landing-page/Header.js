@@ -1,6 +1,9 @@
 import React from "react";
 import {useEffect, useState} from "react";
 import Navbar from "./Navbar";
+import Card from "./Card";
+import Category from "./Category";
+
 
 function Header(){
     return(
@@ -32,6 +35,29 @@ function Header(){
                 </div>
             </div>
 
+            <h2 className="info"> Newly Added Books </h2>
+            <div className="card-container">
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+            </div>
+
+            <div className="ctg">
+            <p></p>
+            <h2 className="info-2">100 Books in 5 Categories</h2>
+            <button type="button" className="btn" id="seeCtg">See All</button>
+            </div>
+
+            <div className="card-container">
+                <Category/>
+            </div>
         </div>
     )
 }

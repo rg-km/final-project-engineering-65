@@ -50,9 +50,9 @@ function Header(){
             </div>
 
             <div className="ctg">
-            <p></p>
-            <h2 className="info-2">100 Books in 5 Categories</h2>
-            <button type="button" className="btn" id="seeCtg">See All</button>
+                <p></p>
+                <h2 className="info-2">100 Books in 5 Categories</h2>
+                <button type="button" className="btn" id="seeCtg">See All</button>
             </div>
 
             <div className="card-container">

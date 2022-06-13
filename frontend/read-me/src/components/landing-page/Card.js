@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import book1 from "./book1.jpg";
+import book1 from "./assets/book1.jpg";
 
 function Card (){
     return(

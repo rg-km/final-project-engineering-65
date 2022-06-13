@@ -1,9 +1,9 @@
 import React from "react";
-import kids from "./kids.png";
-import bussines from "./bussines.png";
-import teens from "./teens.png";
-import science from "./science1.png";
-import health from "./health.png";
+import kids from "./assets/kids.png";
+import bussines from "./assets/bussines.png";
+import teens from "./assets/teens.png";
+import science from "./assets/science1.png";
+import health from "./assets/health.png";
 
 const Category = () => {
     let data=[
@@ -34,17 +34,16 @@ const Category = () => {
         },
     ]
 
-
 return(
     <>
         {data.map((item,index)=>
         {
             return(
                 <div className="card" key={index}>
-                <img src={item.imgSrc} alt=""/>
-                <div className="bottom">
-                <h3 className="book-title">{item.ctgTitle}</h3>
-                </div>
+                    <img src={item.imgSrc} alt=""/>
+                    <div className="bottom">
+                    <h3 className="book-title">{item.ctgTitle}</h3>
+                    </div>
                 </div>
             )
         })}       

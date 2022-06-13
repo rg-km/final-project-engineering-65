@@ -1,8 +1,11 @@
 import './App.css';
+import React  from 'react';
+import { Registration } from './components/registration-page/registration'
+// import { RegistrationForm } from './components/registration-page/registrationForm.comp';
 
 function App() {
   return (
-        <h1>Hello world</h1>
+      <Registration />
   );
 }
 

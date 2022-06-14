@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Card from "./Card";
 import Category from "./Category";
 import Footer from "./Footer";
+import { RandomQuote } from "./RandomQuote";
 
 
 function Header(){
@@ -13,15 +14,7 @@ function Header(){
 
             {/* quote section */}
             <section className="pt-4 quote">
-            <div className="container">
-                <div className="row align-item-center" style={{ width: "360" }}>
-                    <div className="col-auto pr-5">
-                        <h1 className="font-weight-bold my-5">
-                             "Quotes of The Day"
-                        </h1>
-                    </div>
-                </div>
-            </div>
+            <RandomQuote/>
             </section>
 
             {/* searchbar */}

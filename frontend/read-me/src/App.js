@@ -4,7 +4,6 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Login from './components/login-component/login.component'
 import SignUp from './components/signup-componet/signup.component'
-import image2 from './images/read-books.png'
 import logo from './images/logo2.png'
 function App() {
   return (
@@ -15,44 +14,12 @@ function App() {
             <img src={logo} width="150" />
           </div>
         </div>
-        <div className='row d-flex kotak2'>
-          <div className='col-5'>
-            {/* <div className=""> */}
-            <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-              <div className="container">
-                {/* <Link className="navbar-brand judul" to={'/sign-in'}>
-                  Read Me
-                </Link> */}
-                {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-                  <ul className="navbar-nav ml-auto">
-                    <li className="nav-item">
-                      <Link className="nav-link" to={'/sign-in'}>
-                        Login
-                      </Link>
-                    </li>
-                    <li className="nav-item">
-                      <Link className="nav-link" to={'/sign-up'}>
-                        Sign up
-                      </Link>
-                    </li>
-                  </ul>
-                </div> */}
-              </div>
-            </nav>
-            <div className="auth-wrapper">
-              <div className="auth-inner">
-                <Routes>
-                  <Route exact path="/" element={<Login />} />
-                  <Route path="/sign-in" element={<Login />} />
-                  <Route path="/sign-up" element={<SignUp />} />
-                </Routes>
-              </div>
-            </div>
-            {/* </div> */}
-          </div>
-          <div className='col-7 login-kanan'>
-            <img src={image2} width="390" height="390" />
-          </div>
+        <div className='row d-flex pt-5 justify-content-center'>
+          <Routes>
+            <Route exact path="/" element={<Login />} />
+            <Route path="/sign-in" element={<Login />} />
+            <Route path="/sign-up" element={<SignUp />} />
+          </Routes>
         </div >
       </div>
     </Router >

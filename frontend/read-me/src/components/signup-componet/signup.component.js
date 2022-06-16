@@ -27,7 +27,7 @@ export default class SignUp extends Component {
                 <div className="mb-4">
                     {/* <label>Konfimasi Password</label> */}
                     <input
-                        type="konfirmasi password"
+                        type="password"
                         className="konfirmasi password form-control"
                         placeholder="Konfimasi Password"
                     />
@@ -90,7 +90,7 @@ export default class SignUp extends Component {
                         sudah ada akun? <a href="/sign-in">log in</a>
                     </h6>
                     <button type="login" className="btn btn-success px-4">
-                        login
+                        Daftar
                     </button>
                 </div>
             </form>

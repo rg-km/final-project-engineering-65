@@ -29,17 +29,17 @@ export default class Login extends Component {
                 />
               </div>
               {/* <div className="mb-3"> */}
-              <div className='d-flex justify-content-between'>
-                <div className="custom-control custom-checkbox form-check form-switch">
+              <div className='d-flex justify-content-end'>
+                {/* <div className="custom-control custom-checkbox form-check form-switch">
                   <input
                     type="checkbox"
                     className="custom-control-input form-check-input"
                     id="customCheck1"
                   />
-                  {/* <label className="custom-control-label" htmlFor="customCheck1">
+                  <label className="custom-control-label" htmlFor="customCheck1">
                     Show Password
-                  </label> */}
-                </div>
+                  </label>
+                </div> */}
                 {/* </div> */}
                 {/* <div className="form-check form-switch">
                 <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">

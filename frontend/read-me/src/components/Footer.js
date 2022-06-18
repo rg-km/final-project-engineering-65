@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "./assets/logo-footer.png";
-import facebook from "./assets/facebook.png"
-import twitter from "./assets/twitter.png"
+import logo from "../assets/logo-footer.png";
+import facebook from "../assets/facebook.png"
+import twitter from "../assets/twitter.png"
 
 function Footer(){
     return(
         <footer>
-            <div class="container-fluid text-center text-md-left">
+            <div className="container-fluid text-center text-md-left">
                 <a href="#" className="footer-logo">
                     <img src={logo} alt="footer-logo"/>
                 </a>

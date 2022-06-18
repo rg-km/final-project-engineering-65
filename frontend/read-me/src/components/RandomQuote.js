@@ -13,7 +13,7 @@ export function RandomQuote() {
             .then((res) => res.json())
             .then((data) => setQuote(data))
             .finally(() => setLoading(false));
-    }
+        }
 
     return(
         <section>

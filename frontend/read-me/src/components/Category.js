@@ -1,9 +1,9 @@
 import React from "react";
-import kids from "./assets/kids.png";
-import bussines from "./assets/bussines.png";
-import teens from "./assets/teens.png";
-import science from "./assets/science1.png";
-import health from "./assets/health.png";
+import kids from "../assets/kids.png";
+import bussines from "../assets/bussines.png";
+import teens from "../assets/teens.png";
+import science from "../assets/science1.png";
+import health from "../assets/health.png";
 
 const Category = () => {
     let data=[

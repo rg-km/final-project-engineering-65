@@ -1,6 +1,5 @@
 import React from "react";
-import {useEffect, useState} from "react";
-import logo2 from "./assets/logo2.png";
+import logo2 from "../assets/logo2.png";
 
 function Navbar(){
     return(

@@ -81,8 +81,9 @@ form.form-inline input[type=text] {
 }
 
 .card .bottom .book-title{
+  border: none;
+  background: none;
   font-size: 20px;
-  margin-bottom: 12px;
 }
 
 .ctg{

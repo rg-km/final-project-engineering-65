@@ -1,12 +1,16 @@
 import React from "react";
+import { useState } from "react";
 import book1 from "../assets/book1.jpg";
+import Modals from "./Modals/Modals";
 
 function Card (){
+    const [openModal, setOpenModal] = useState(false)
     return(
         <div className="card">
             <img src={book1} alt=""/>
             <div className="bottom">
-                <h3 className="book-title">Will</h3>
+                <button className="book-title" onClick={() => setOpenModal(true)}>Will</button>
+                {openModal && <Modals closeModal={setOpenModal}/>}
             </div>
         </div>
     )

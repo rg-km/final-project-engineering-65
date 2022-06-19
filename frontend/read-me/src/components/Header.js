@@ -27,6 +27,7 @@ function Header(){
             </div>
 
             <h2 className="info"> Newly Added Books </h2>
+            
             <div className="card-container">
                 <Card/>
                 <Card/>
@@ -38,7 +39,7 @@ function Header(){
                 <Card/>
                 <Card/>
                 <Card/>
-            </div>
+                </div>
 
             <div className="ctg">
                 <p></p>

@@ -21,10 +21,10 @@ export function RandomQuote() {
         <div className="container">
                 <div className="row align-item-center" style={{ width: "360" }}>
                     <div className="col-auto pr-5">
-                        <h3 className="font-weight-bold my-5">
+                        <h3 className="font-weight-bold my-4">
                         {quote.content}
                         </h3>
-                        <h5 className="pb-1"> {quote.author} </h5>
+                        <h5 className="pb-3"> {quote.author} </h5>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ nav{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: fixed;
+	/* position: fixed; */
   padding: 5px;
 	left: 0;
 	top: 0;

@@ -10,7 +10,7 @@ function Header(){
         <div id="main">
 
             {/* quote section */}
-            <section className="pt-4 quote">
+            <section className="pt-1 quote">
             <RandomQuote/>
             </section>
 

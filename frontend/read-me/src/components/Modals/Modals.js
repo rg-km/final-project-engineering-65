@@ -29,3 +29,4 @@ function Modal({onClose}){
 }
 
 export default Modal
+

@@ -9,13 +9,14 @@ function Card (){
     const [openModal, setOpenModal] = useState(false)
     return(
         <>
-        <div className="card" >
+        <div className="card" onClick={() => setOpenModal(true)} >
             <img src={book1} alt=""/>
             <div className="bottom">
-                <button className="book-title" onClick={() => setOpenModal(true)}>Will</button> 
-                {openModal && <Modals onClose={setOpenModal}/>}
+                <button className="book-title" >Will</button> 
+               
             </div>
         </div>
+        {openModal && <Modals onClose={setOpenModal}/>}
         {/* <Modals openModal={openModal} onClose={() => setOpenModal(false)}/> */}
         </>
     )

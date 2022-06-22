@@ -4,6 +4,7 @@ import Category from "./Category";
 import { RandomQuote } from "./RandomQuote";
 
 
+
 function Header(){
     
     return(
@@ -39,7 +40,9 @@ function Header(){
                 <Card/>
                 <Card/>
                 <Card/>
-                </div>
+            </div>
+
+           
 
             <div className="ctg">
                 <p></p>

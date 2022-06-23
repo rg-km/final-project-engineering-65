@@ -14,10 +14,6 @@ function App() {
         <Routes>
           <Route path="/profil" element={<Profil />} />
         </Routes>
-
-        <Routes>
-          <Route path="/rating" element={<RatingModal />} />
-        </Routes>
       </div>
   );
 }

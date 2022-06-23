@@ -1,72 +1,40 @@
 import React, { useState } from 'react';
-import { Document, Page, pdfjs } from 'react-pdf';
+import { Worker } from '@react-pdf-viewer/core';
+import { Viewer } from '@react-pdf-viewer/core';
+import '@react-pdf-viewer/core/lib/styles/index.css';
 import book from "../assets/The-Aliens.pdf";
+import '../styles/ReadPage.css'
+import Navbar from '../components/NavbarProfil';
+import { Button } from 'react-bootstrap';
 
 
 export default function ReadPage() {
 	
-pdfjs.GlobalWorkerOptions.workerSrc =
-`//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
-const [numPages, setNumPages] = useState(null);
-const [pageNumber, setPageNumber] = useState(1);
-
-/*To Prevent right click on screen*/
-document.addEventListener("contextmenu", (event) => {
-	event.preventDefault();
-});
-	
-/*When document gets loaded successfully*/
-function onDocumentLoadSuccess({ numPages }) {
-	setNumPages(numPages);
-	setPageNumber(1);
-}
-
-function changePage(offset) {
-	setPageNumber(prevPageNumber => prevPageNumber + offset);
-}
-
-function previousPage() {
-	changePage(-1);
-}
-
-function nextPage() {
-	changePage(1);
-}
-
-return (
-	<>
-	<div className="main">
-	<Document
-		file={book}
-		onLoadSuccess={onDocumentLoadSuccess}
-	>
-		<Page height="500" pageNumber={pageNumber} />
-	</Document>
-	<div>
-		<div className="pagec">
-		Page {pageNumber || (numPages ? 1 : '--')} of {numPages || '--'}
-		</div>
-		<div className="buttonc">
-		<button
-		type="button"
-		disabled={pageNumber <= 1}
-		onClick={previousPage}
-		className="Pre"
-			
-		>
-		Previous
-		</button>
-		<button
-		type="button"
-		disabled={pageNumber >= numPages}
-		onClick={nextPage}
+	return (
+		<>
+		<Navbar/>
 		
-		>
-		Next
-		</button>
+		<section className='judul'>
+			Judul Buku
+		</section>
+		
+		<div className="read-page">
+		<Worker workerUrl="https://unpkg.com/pdfjs-dist@2.14.305/build/pdf.worker.min.js">
+			<Viewer fileUrl={book} allow="autoplay" />
+		</Worker>
 		</div>
-	</div>
-	</div>
-	</>
-);
+
+		<section className='under-pdf'>
+			<Button 
+			style={
+					{color:"white", 
+					background: "#3EB489",
+					margin: "4%", 
+					border: "none"}
+				}
+			>Next</Button>
+		</section>
+		
+		</>
+	);
 }

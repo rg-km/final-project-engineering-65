@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import book1 from "../assets/book1.jpg";
-import Modals from "./Modals/Modals";
+import Modals from "./Modals/DetailModal";
 //import { Modal } from 'react-bootstrap';
 
 

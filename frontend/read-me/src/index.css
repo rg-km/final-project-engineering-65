@@ -202,3 +202,10 @@ footer {
   margin-left: 700px;
   margin-top: 10px;
 }
+
+#submit {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  margin-left: 280px;
+}

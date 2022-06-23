@@ -12,11 +12,11 @@ export default class Login extends Component {
             <form className='formlogin'>
               {/* <h5 className='title_u'></h5> */}
               <h3 className='mb-2'>Log In</h3>
-              <h6 className='mb-4 text-dark'>belum ada akun? <a href='/sign-up'>daftar</a></h6>
+              <h6 className='mb-4 text-dark'>Belum ada akun? <a href='/sign-up'>Daftar</a></h6>
               <div className="mb-4">
                 <input
-                  type="email"
-                  className="mail form-control"
+                  type="text"
+                  className="mail Input"
                   placeholder="Email"
                 />
               </div>
@@ -24,10 +24,11 @@ export default class Login extends Component {
                 {/* <label>Password</label> */}
                 <input
                   type="password"
-                  className="password form-control"
+                  className="password"
                   placeholder="Password"
                 />
               </div>
+              
               {/* <div className="mb-3"> */}
               <div className='d-flex justify-content-end'>
                 {/* <div className="custom-control custom-checkbox form-check form-switch">
@@ -47,7 +48,7 @@ export default class Login extends Component {
               </div> */}
                 <div className="d-grid">
                   <button type="login" className="btn btn-success px-4">
-                    login
+                    Login
                   </button>
                 </div>
                 {/* <p className="forgot-password text-right">
@@ -60,7 +61,7 @@ export default class Login extends Component {
         {/* </div> */}
       </div>
       <div className='col-7 pt-5 login-kanan'>
-        <img src={image2} width="390" height="390" />
+        <img src={image2} className="login-kanan" width="auto" height="auto" />
       </div>
       </>
     )

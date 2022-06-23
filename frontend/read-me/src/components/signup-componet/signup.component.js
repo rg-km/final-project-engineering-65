@@ -1,6 +1,10 @@
-import React, { Component } from 'react'
+import React, { useState, Component, setDate } from 'react'
 export default class SignUp extends Component {
     render() {
+
+        function Registration(){
+            const [date, setDate]=useState();
+        }
         return (
             <>
             <div className='col-9'>
@@ -12,7 +16,7 @@ export default class SignUp extends Component {
                     {/* <label>Email</label> */}
                     <input
                         type="email"
-                        className="mail form-control"
+                        className="mail"
                         placeholder="Email"
                     />
                 </div>
@@ -20,7 +24,7 @@ export default class SignUp extends Component {
                     {/* <label>Password</label> */}
                     <input
                         type="password"
-                        className="password form-control"
+                        className="password"
                         placeholder="Password"
                     />
                 </div>
@@ -28,7 +32,7 @@ export default class SignUp extends Component {
                     {/* <label>Konfimasi Password</label> */}
                     <input
                         type="password"
-                        className="konfirmasi password form-control"
+                        className="password "
                         placeholder="Konfimasi Password"
                     />
                 </div>
@@ -36,15 +40,16 @@ export default class SignUp extends Component {
                     {/* <label>Nama Lengkap</label> */}
                     <input
                         type="nama lengkap"
-                        className="user nama lengkap form-control"
+                        className="user"
                         placeholder="Nama Lengkap"
                     />
                 </div>
                 <div className="mb-4">
                     {/* <label>Tempat,Tanggal Lahir</label> */}
                     <input
-                        type="tempat,tanggal lahir"
-                        className="date tempat,tanggal lahir hp form-control"
+                        type="date"
+                        onChange={e=>setDate(e.target.value)}
+                        className="date"
                         placeholder="Tempat,Tanggal Lahir"
                     />
                 </div>
@@ -52,7 +57,7 @@ export default class SignUp extends Component {
                     {/* <label>Jenis Kelamin</label> */}
                     <input
                         type="jenis kelamin"
-                        className="gender jenis kelamin form-control"
+                        className="gender jenis kelamin"
                         placeholder="Jenis Kelamin"
                     />
                 </div>
@@ -87,7 +92,7 @@ export default class SignUp extends Component {
                 </div> */}
                 <div className="d-flex justify-content-end align-items-center">
                     <h6 className="forgot-password pt-2 pe-4">
-                        sudah ada akun? <a href="/sign-in">log in</a>
+                        Sudah ada akun? <a href="/sign-in">Log in</a>
                     </h6>
                     <button type="login" className="btn btn-success px-4">
                         Daftar

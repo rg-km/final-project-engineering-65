@@ -2,7 +2,6 @@ import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
 import Profil from './pages/Profil';
-import RatingModal from './components/Modals/RatingModal';
 
 function App() {
   return (

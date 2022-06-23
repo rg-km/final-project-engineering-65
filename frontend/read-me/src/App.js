@@ -5,9 +5,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Login from './components/login-component/login.component'
 import SignUp from './components/signup-componet/signup.component'
 import logo from './images/logo2.png'
+import Home from './pages/Home';
+import Profil from './pages/Profil';
+
 function App() {
   return (
-    <Router>
       <div className='container kotak'>
         <div className='row'>
           <div className='col-12 ps-1 pt-5'>
@@ -16,13 +18,13 @@ function App() {
         </div>
         <div className='row d-flex pt-5 justify-content-center'>
           <Routes>
-            <Route exact path="/" element={<Login />} />
+            <Route exact path="/" element={<Home />} />
             <Route path="/sign-in" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/profil" element={<Profil />} />
           </Routes>
         </div >
       </div>
-    </Router >
   )
 }
 export default App

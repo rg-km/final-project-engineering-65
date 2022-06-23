@@ -4,12 +4,14 @@ import Category from "./Category";
 import { RandomQuote } from "./RandomQuote";
 
 
+
 function Header(){
+    
     return(
         <div id="main">
 
             {/* quote section */}
-            <section className="pt-4 quote">
+            <section className="pt-1 quote">
             <RandomQuote/>
             </section>
 
@@ -26,6 +28,7 @@ function Header(){
             </div>
 
             <h2 className="info"> Newly Added Books </h2>
+            
             <div className="card-container">
                 <Card/>
                 <Card/>
@@ -38,6 +41,8 @@ function Header(){
                 <Card/>
                 <Card/>
             </div>
+
+           
 
             <div className="ctg">
                 <p></p>

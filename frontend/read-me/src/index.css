@@ -1,19 +1,20 @@
-:root{
+:root {
   --primary-color: white;
   --secondary-color: #3EB489;
+  --tertiary-color: #ff8431;
 }
 
-.logo img{
+.logo img {
   display: flex;
   width: 50%;
   margin: auto;
 }
 
-nav{
+nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: fixed;
+	/* position: fixed; */
   padding: 5px;
 	left: 0;
 	top: 0;
@@ -23,24 +24,24 @@ nav{
   transition: 0.6s ease-in-out;
 }
 
-#login{
+#login {
   background-color: var(--secondary-color);
   color: var(--primary-color);
   margin: 5px;
   padding: 5px 10px;
 }
 
-.quote{
+.quote {
   background-color: whitesmoke;
   font-style: italic;
 }
 
-.searchbar{
+.searchbar {
   background-color: var(--primary-color);
   padding-top: 20px;
 }
 
-#src-button{
+#src-button {
  margin-left: 20px ;
  color: var(--primary-color);
  background-color: var(--secondary-color);
@@ -53,13 +54,13 @@ form.form-inline input[type=text] {
   text-align: center;
 }
 
-.info{
+.info {
   margin-left: 17%;
   font-size: 25px;
   font-style: italic;
 }
 
-.card-container{
+.card-container {
   width: 65%;
   margin: 0 auto;
   margin-top: 25px;
@@ -69,7 +70,7 @@ form.form-inline input[type=text] {
   box-sizing: border-box;
 }
 
-.card{
+.card {
   background-color: var(--secondary-color);
   border-radius: 1rem;
   padding: 0.5rem;
@@ -80,24 +81,26 @@ form.form-inline input[type=text] {
   position: relative;
 }
 
-.card .bottom .book-title{
+.card .bottom .book-title {
   font-size: 20px;
   margin-bottom: 12px;
+  border: none;
+  background-color: transparent;
 }
 
-.ctg{
+.ctg {
   display: flex;
   justify-content: space-around;
 }
 
-.info-2{
+.info-2 {
   font-size: 25px;
   text-align: center;
   margin-top: 30px;
   margin-left: 100px;
 }
 
-#seeCtg{
+#seeCtg {
   border-radius: 20px;
   background-color: #DCDCDC;
   color: black;
@@ -108,7 +111,7 @@ form.form-inline input[type=text] {
   margin-right: 100px;
 }
 
-footer{
+footer {
   background-color: var(--secondary-color);
 }
 
@@ -118,30 +121,84 @@ footer{
   min-height: 100vh;
 } */
 
-.footer-logo img{
+.footer-logo img {
   display: flex;
   width: 9%;
   margin: auto;
 }
 
-.fb{
+.fb {
   width: 25px;
   display: inline;
-  margin-left: 47%;
+  margin-left: 47.5%;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.tw{
+.tw {
   width: 25px;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 15px;
   margin-top: 5px;
   margin-bottom: 10px;
 }
 
-.about-us{
+.about-us {
   font-size: 18px;
   text-decoration: none !important;
   color: var(--primary-color);
+  text-align: center;
+}
+
+.title {
+  margin-top: 70px;
+  text-align: center;
+  color: var(--secondary-color);
+  font-weight: 800;
+  margin-bottom: 35px;
+}
+
+.nama {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+#point {
+  margin-left: 625px;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.point-2 {
+  color: var(--tertiary-color);
+  font-weight: 700;
+}
+
+.tukar {
+  margin-left: 17%;
+  margin-top: 50px;
+  font-weight: 650;
+}
+
+#unlock-button {
+  margin-left: 5px ;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+}
+
+#navbar .dropdown-toggle::after {
+  content: unset;
+}
+
+.menu-burger {
+  width: 19px;
+}
+
+#dropdown {
+  background-color: var(--secondary-color);
+  border: none;
+  margin-left: 700px;
+  margin-top: 10px;
 }

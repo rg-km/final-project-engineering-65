@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import book1 from "../assets/book1.jpg";
-import Modals from "./Modals/DetailModal";
+import DetailModal from "./Modals/DetailModal";
 //import { Modal } from 'react-bootstrap';
 
 
@@ -16,7 +16,7 @@ function Card (){
                
             </div>
         </div>
-        {openModal && <Modals onClose={setOpenModal}/>}
+        {openModal && <DetailModal onClose={setOpenModal}/>}
         {/* <Modals openModal={openModal} onClose={() => setOpenModal(false)}/> */}
         </>
     )

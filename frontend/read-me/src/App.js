@@ -7,6 +7,7 @@ import SignUp from './components/signup-componet/signup.component'
 import logo from './images/logo2.png'
 import Home from './pages/Home';
 import Profil from './pages/Profil';
+import ReadPage from './pages/ReadPage';
 
 function App() {
   return (
@@ -24,7 +25,22 @@ function App() {
             <Route path="/profil" element={<Profil />} />
           </Routes>
         </div >
-      </div>
+
+
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+
+          <Routes>
+            <Route path="/read-page" element={<ReadPage />} />
+          </Routes>
+
+          <Routes>
+            <Route path="/profil" element={<Profil />} />
+          </Routes>
+        </div>
+      </div >
   )
 }
 export default App

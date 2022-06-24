@@ -28,7 +28,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	position: fixed;
+	/* position: fixed; */
   padding: 5px;
 	left: 0;
 	top: 0;
@@ -98,6 +98,8 @@ form.form-inline input[type=text] {
 .card .bottom .book-title {
   font-size: 20px;
   margin-bottom: 12px;
+  border: none;
+  background-color: transparent;
 }
 
 .ctg {
@@ -213,4 +215,11 @@ footer {
   border: none;
   margin-left: 700px;
   margin-top: 10px;
+}
+
+#submit {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  margin-left: 280px;
 }

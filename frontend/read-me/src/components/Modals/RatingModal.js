@@ -8,7 +8,7 @@ const colors = {
     grey: "#788896"
 }
 
-function Rating({onClose}) {
+function RatingModal({onClose}) {
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
     const [hoverValue, setHoverValue] = React.useState(undefined);
@@ -81,4 +81,4 @@ const styles = {
     },
 }
 
-export default Rating;
+export default RatingModal;

@@ -13,7 +13,7 @@ function PointModal({onClose}){
                 </div> */}
                 <div className="body">
                     <h1> Congratulations </h1>
-                    <img src={logo} />
+                    <img src={logo} width="200px" />
                     {/* <p> Nama Penulis Buku </p> */}
                     <h5> Mari Membaca Lebih Banyak! </h5>
                     {/* <p> Tahun Terbit </p> */}

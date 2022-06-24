@@ -1,11 +1,20 @@
 import React, { Component } from 'react'
 import image2 from '../../images/read-books.png'
+import logo from '../../images/logo2.png'
 // import images from '../images/pass.png'
 // import image from '../images/mail.png'
 export default class Login extends Component {
   render() {
     return (
       <>
+      <div className='container kotak'>
+          <div className='row'>
+              <div className='col-12 ps-1 pt-2'>
+                  <img src={logo} width="150" />
+              </div>
+          </div>
+      
+      <div className='row d-flex pt-5 justify-content-center'>
       <div className='col-5 pt-5'>
         <div className="auth-wrapper">
           <div className="auth-inner">
@@ -59,9 +68,13 @@ export default class Login extends Component {
           </div>
         </div>
         {/* </div> */}
+
+        </div>
+        <div className='col-7 pt-2 login-kanan' style={{overflow:'hidden'}}>
+          <img src={image2} className="login-kanan" width="auto" height="auto" />
+        </div>
+
       </div>
-      <div className='col-7 pt-5 login-kanan'>
-        <img src={image2} className="login-kanan" width="auto" height="auto" />
       </div>
       </>
     )

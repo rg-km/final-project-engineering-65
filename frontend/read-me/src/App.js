@@ -11,23 +11,14 @@ import ReadPage from './pages/ReadPage';
 
 function App() {
   return (
-      // <div className='container kotak'>
-      //   <div className='row'>
-      //     <div className='col-12 ps-1 pt-5'>
-      //       <img src={logo} width="150" />
-      //     </div>
-      //   </div>
-      //   <div className='row d-flex pt-5 justify-content-center'>
+
       <div className="App">
           <Routes>
             <Route exact path="/" element={<Home />} />
             <Route path="/sign-in" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />
           </Routes>
-         {/* </div > */}
 
-
-      
         <Routes>
         {/* <Route path="/" element={<Home />} /> */}
           <Route path="/read-page" element={<ReadPage />} />
@@ -35,7 +26,6 @@ function App() {
         </Routes>
 
       </div>
-    // </div >
   )
 }
 export default App

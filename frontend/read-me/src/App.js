@@ -8,27 +8,18 @@ import logo from './images/logo2.png'
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 import ReadPage from './pages/ReadPage';
-import PointModal from './components/Modals/PointModal';
 
 function App() {
   return (
-
-      <div className="App">
-          <Routes>
-            <Route exact path="/" element={<Home />} />
-            <Route path="/sign-in" element={<Login />} />
-            <Route path="/sign-up" element={<SignUp />} />
-          </Routes>
-
-        <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-          <Route path="/read-page" element={<ReadPage />} />
-          <Route path="/profil" element={<Profil />} />
-        </Routes>
-        <Routes>
-          <Route path="/point" element={<PointModal />} />
-        </Routes>
-      </div>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/sign-in" element={<Login />} />
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/read-page" element={<ReadPage />} />
+        <Route path="/profil" element={<Profil />} />
+      </Routes>
+    </div>
   )
 }
 export default App

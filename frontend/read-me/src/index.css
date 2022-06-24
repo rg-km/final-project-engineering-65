@@ -223,3 +223,7 @@ footer {
   border: none;
   margin-left: 280px;
 }
+
+#link {
+    text-decoration: none;
+}

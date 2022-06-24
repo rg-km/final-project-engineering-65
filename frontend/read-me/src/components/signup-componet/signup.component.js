@@ -102,7 +102,7 @@ export default class SignUp extends Component {
                     </div> */}
                     <div className="d-flex justify-content-end align-items-center mb-4">
                         <h6 className="forgot-password pt-2 pe-4">
-                            Sudah ada akun? <a href="/sign-in">Log in</a>
+                            Sudah ada akun? <a href="/sign-in" id="link">Log in</a>
                         </h6>
                         <button type="login" className="btn btn-success px-4">
                             Daftar

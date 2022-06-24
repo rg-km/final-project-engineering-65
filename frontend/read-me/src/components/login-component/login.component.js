@@ -21,7 +21,7 @@ export default class Login extends Component {
             <form className='formlogin'>
               {/* <h5 className='title_u'></h5> */}
               <h3 className='mb-2'>Log In</h3>
-              <h6 className='mb-4 text-dark'>Belum ada akun? <a href='/sign-up'>Daftar</a></h6>
+              <h6 className='mb-4 text-dark'>Belum ada akun? <a href='/sign-up' id="link">Daftar</a></h6>
               <div className="mb-4">
                 <input
                   type="text"

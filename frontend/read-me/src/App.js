@@ -22,25 +22,19 @@ function App() {
             <Route exact path="/" element={<Home />} />
             <Route path="/sign-in" element={<Login />} />
             <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/profil" element={<Profil />} />
           </Routes>
         </div >
 
 
-        <div className="App">
-          <Routes>
-            <Route path="/" element={<Home />} />
-          </Routes>
+      <div className="App">
+        <Routes>
+        {/* <Route path="/" element={<Home />} /> */}
+          <Route path="/read-page" element={<ReadPage />} />
+          <Route path="/profil" element={<Profil />} />
+        </Routes>
 
-          <Routes>
-            <Route path="/read-page" element={<ReadPage />} />
-          </Routes>
-
-          <Routes>
-            <Route path="/profil" element={<Profil />} />
-          </Routes>
-        </div>
-      </div >
+      </div>
+    </div >
   )
 }
 export default App

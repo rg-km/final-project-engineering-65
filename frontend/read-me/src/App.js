@@ -8,6 +8,7 @@ import logo from './images/logo2.png'
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 import ReadPage from './pages/ReadPage';
+import PointModal from './components/Modals/PointModal';
 
 function App() {
   return (
@@ -24,7 +25,9 @@ function App() {
           <Route path="/read-page" element={<ReadPage />} />
           <Route path="/profil" element={<Profil />} />
         </Routes>
-
+        <Routes>
+          <Route path="/point" element={<PointModal />} />
+        </Routes>
       </div>
   )
 }

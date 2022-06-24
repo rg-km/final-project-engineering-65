@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import book1 from "../../assets/book1.jpg";
 import './Modal.css';
+import PointModal from "./PointModal";
 
 const colors = {
     orange: "#ff8431",
@@ -12,6 +13,7 @@ function RatingModal({onClose}) {
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
     const [hoverValue, setHoverValue] = React.useState(undefined);
+    const [openModal, setOpenModal] = useState(false)
 
     const handleClick = value => {
         setCurrentValue(value);
@@ -62,7 +64,10 @@ function RatingModal({onClose}) {
                     placeholder="Review Buku"
                     style={styles.textarea}
                 />
-                <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit">Submit</button>
+                <div className="btn" onClick={() => setOpenModal(true)} >
+                    <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit">Submit</button>
+                </div>
+                {openModal && <PointModal onClose={setOpenModal}/>}
             </div>
         </div>
     )

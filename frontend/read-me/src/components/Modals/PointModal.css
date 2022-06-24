@@ -13,16 +13,17 @@
     z-index: 1;
 }
 
-.modalContainer{
+.p-modalContainer{
     background: white;
     width: 400px;
     height: 500px;
     padding: 1.5rem;
-    position: relative;
+    position: fixed;
     box-sizing: border-box;
     /* overflow: hidden; */
     font-size: 15px;
     text-align: center;
+    border-radius: 25px;
 }
 
 
@@ -44,20 +45,27 @@
     background-color: transparent;
 }
 
-.body{
-    margin-top: 10px;
+.p-body{
+    /* margin: 50px 0px 50px 0px; */
     font-size: small;
+    padding: 35px 0px 5px 0px;
 }
 
-.buttonRead button{
+.p-body h1{
+    margin-bottom: 50px;
+}
+.p-body h5{
+    margin-top: 50px;
+}
+
+.p-buttonRead button{
     outline: none;
     border: none;
     background-color: #3EB489;
-    border-radius: 10px;
+    border-radius: 35px;
     width: 240px;
+    color: white;
+    width: 120px;
+    height: 30px;
 }
 
-.bookSynopsis{
-    margin-top: 15px;
-    font-size: small;
-}

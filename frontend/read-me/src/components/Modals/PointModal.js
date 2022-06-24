@@ -1,24 +1,24 @@
 import React from "react";
-import './Modal.css';
+import './PointModal.css';
 // import book1 from "../../assets/book1.jpg";
 import logo from "../../images/10 point.png";
 
 function PointModal({onClose}){
     return(
         <div className="modalBackground">
-            <div className="modalContainer">
+            <div className="p-modalContainer">
                 <button onClick={()=> onClose(false)} className="close"> X </button>
                 {/* <div className="modalImage">
                     <img src={book1} alt=""/>
                 </div> */}
-                <div className="body">
+                <div className="p-body">
                     <h1> Congratulations </h1>
                     <img src={logo} width="200px" />
                     {/* <p> Nama Penulis Buku </p> */}
                     <h5> Mari Membaca Lebih Banyak! </h5>
                     {/* <p> Tahun Terbit </p> */}
                 </div>
-                <div className="buttonRead">
+                <div className="p-buttonRead">
                     <button>NEXT</button>
                 </div>
                 {/* <div className="bookSynopsis">

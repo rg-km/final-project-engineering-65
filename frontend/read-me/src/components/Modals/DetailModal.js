@@ -3,7 +3,7 @@ import './Modal.css';
 import book1 from "../../assets/book1.jpg";
 import logo2 from "../../assets/logo-footer.png";
 
-function Modal({onClose}){
+function DetailModal({onClose}){
     return(
         <div className="modalBackground">
             <div className="modalContainer">
@@ -28,5 +28,5 @@ function Modal({onClose}){
     )
 }
 
-export default Modal
+export default DetailModal
 

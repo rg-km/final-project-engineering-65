@@ -3,6 +3,7 @@ import { FaStar } from "react-icons/fa";
 import book1 from "../../assets/book1.jpg";
 import './Modal.css';
 import PointModal from "./PointModal";
+import axios from 'axios';
 
 const colors = {
     orange: "#ff8431",
@@ -15,6 +16,8 @@ function RatingModal({onClose}) {
     const [hoverValue, setHoverValue] = React.useState(undefined);
     const [openModal, setOpenModal] = useState(false)
 
+    const profil = JSON.parse(localStorage.getItem('profil'))
+
     const handleClick = value => {
         setCurrentValue(value);
     }
@@ -25,6 +28,29 @@ function RatingModal({onClose}) {
 
     const handleMouseLeave = () => {
         setHoverValue(undefined);
+    }
+
+    const submitReview = (e) => {
+        e.preventDefault()
+        axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)
+        .then((res) => {
+            console.log(res)
+            const resData = res.data
+            axios.put(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`, {
+                ...resData, 
+                point: resData.point + 10
+            })
+            .then((resUpdate) => {
+                setOpenModal(true)
+                localStorage.setItem('profil', JSON.stringify(resUpdate.data))
+            })
+            .catch((eUpdate) => {
+                console.log(eUpdate)
+            })
+        })
+        .catch((e) => {
+            console.log(e)
+        })
     }
 
     return(
@@ -64,9 +90,7 @@ function RatingModal({onClose}) {
                     placeholder="Review Buku"
                     style={styles.textarea}
                 />
-                <div className="btn" onClick={() => setOpenModal(true)} >
-                    <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit">Submit</button>
-                </div>
+                <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit" onClick={submitReview}>Submit</button>
                 {openModal && <PointModal onClose={setOpenModal}/>}
             </div>
         </div>

@@ -1,17 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaStar } from "react-icons/fa";
 import book1 from "../../assets/book1.jpg";
 import './Modal.css';
+import PointModal from "./PointModal";
+import axios from 'axios';
 
 const colors = {
     orange: "#ff8431",
     grey: "#788896"
 }
 
-function Rating({onClose}) {
+function RatingModal({onClose}) {
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
     const [hoverValue, setHoverValue] = React.useState(undefined);
+    const [openModal, setOpenModal] = useState(false)
+
+    const profil = JSON.parse(localStorage.getItem('profil'))
 
     const handleClick = value => {
         setCurrentValue(value);
@@ -23,6 +28,29 @@ function Rating({onClose}) {
 
     const handleMouseLeave = () => {
         setHoverValue(undefined);
+    }
+
+    const submitReview = (e) => {
+        e.preventDefault()
+        axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)
+        .then((res) => {
+            console.log(res)
+            const resData = res.data
+            axios.put(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`, {
+                ...resData, 
+                point: resData.point + 10
+            })
+            .then((resUpdate) => {
+                setOpenModal(true)
+                localStorage.setItem('profil', JSON.stringify(resUpdate.data))
+            })
+            .catch((eUpdate) => {
+                console.log(eUpdate)
+            })
+        })
+        .catch((e) => {
+            console.log(e)
+        })
     }
 
     return(
@@ -62,7 +90,8 @@ function Rating({onClose}) {
                     placeholder="Review Buku"
                     style={styles.textarea}
                 />
-                <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit">Submit</button>
+                <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="submit" type="submit" onClick={submitReview}>Submit</button>
+                {openModal && <PointModal onClose={setOpenModal}/>}
             </div>
         </div>
     )
@@ -81,4 +110,4 @@ const styles = {
     },
 }
 
-export default Rating;
+export default RatingModal;

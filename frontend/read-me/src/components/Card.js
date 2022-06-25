@@ -7,13 +7,20 @@ import DetailModal from "./Modals/DetailModal";
 function Card ({book}){
     const [openModal, setOpenModal] = useState(false)
     const [bookItem,setItem] = useState();
+    const getDetail = () => {
+        if (localStorage.getItem('token') != null) {
+            setOpenModal(true)
+        } else {
+            window.location.href = "/sign-in"
+        }
+    }
 
     return(
         <>
          {book.map((item,index)=>{
             return(
                 <>
-                <div className="card" onClick={() => {setOpenModal(true); setItem(item)}} key={index} >
+                <div className="card" onClick={() => {getDetail() ; setItem(item)}} key={index} >
                     <img src={item.cover} alt="" />
                     <div className="bottom">
                         <button className="book-title">{item.judul}</button> 

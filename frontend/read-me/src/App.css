@@ -196,7 +196,3 @@ div.form-right .custom-control-label::before {
         transform: rotate(360deg);
     }
 }
-
-a href {
-    text-decoration: none;
-}

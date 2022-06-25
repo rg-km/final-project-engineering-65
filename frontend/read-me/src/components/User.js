@@ -12,7 +12,7 @@ function User() {
             <h4 className="nama">NISA ALIVIA</h4>
 
             <div id="point">
-                <h4 className="point-2"><img src={coint} width={35} height={30} alt=""/> 100</h4>
+                <h4 className="point-2"><img src={coint} width={35} alt=""/> 100</h4>
             </div>
 
             <h4 className="tukar">Tukarkan Points</h4>

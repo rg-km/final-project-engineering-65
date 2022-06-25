@@ -10,7 +10,8 @@ function SignUp() {
         confirm_pass: "",
         nama: "",
         tgl_lahir: "",
-        jenis_kelamin: ""
+        jenis_kelamin: "",
+        point: 0
     });
 
     function registration(e){ 

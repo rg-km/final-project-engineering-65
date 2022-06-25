@@ -1,9 +1,10 @@
 import React from 'react'
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
-import { BrowserRouter as Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Login from './components/login-component/login.component'
 import SignUp from './components/signup-componet/signup.component'
+import logo from './images/logo2.png'
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 import ReadPage from './pages/ReadPage';

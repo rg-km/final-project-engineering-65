@@ -7,13 +7,20 @@ import DetailModal from "./Modals/DetailModal";
 
 function Card (){
     const [openModal, setOpenModal] = useState(false)
+    const getDetail = () => {
+        if (localStorage.getItem('token') != null) {
+            setOpenModal(true)
+        } else {
+            window.location.href = "/sign-in"
+        }
+    }
+
     return(
         <>
-        <div className="card" onClick={() => setOpenModal(true)} >
+        <div className="card" onClick={getDetail}>
             <img src={book1} alt=""/>
             <div className="bottom">
                 <button className="book-title" >Will</button> 
-               
             </div>
         </div>
         {openModal && <DetailModal onClose={setOpenModal}/>}

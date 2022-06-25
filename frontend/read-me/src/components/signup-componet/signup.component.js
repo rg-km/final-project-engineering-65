@@ -2,10 +2,8 @@ import React, { useState, Component, setDate } from 'react'
 import logo from '../../images/logo2.png'
 import axios, { Axios } from 'axios'
 
-// https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/
 
-function SignUp() { 
-    const [date, setDate] = useState();
+function SignUp() {
     const [data, setData] = useState({
         email: "",
         password: "",

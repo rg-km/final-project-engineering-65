@@ -15,10 +15,7 @@ function UnlockModal({onClose}){
                 
                 <div className="body">
                     <h5> Judul Buku </h5>
-                    
-                    <div id="point">
-                        <h4 className="coint"><img src={coint} width={35} height={30} alt=""/> 100</h4>
-                    </div>
+                    <h5 className="coint"><img src={coint} width={28} alt=""/> 20</h5>
 
                     <div className="buttonUnlock">
                         <button>TUKAR POINT</button>
@@ -30,7 +27,7 @@ function UnlockModal({onClose}){
                 </div>
 
                 <div className="bookSynopsis">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus ex dui, a luctus sapien tempus et. Phasellus tincidunt purus sit amet massa congue, et suscipit odio pulvinar. Ut iaculis justo augue, ut lacinia lectus maximus luctus. Orci varius natoque penatibus et magnis dis parturient montes.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus ex dui, a luctus sapien tempus et. Phasellus tincidunt purus sit amet massa congue, et suscipit odio pulvinar. Ut iaculis justo augue, ut lacinia lectus maximus luctus.</p>
                 </div>
             </div>
         </div>

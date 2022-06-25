@@ -28,6 +28,7 @@ function SignUp() {
                     tgl_lahir: "",
                     jenis_kelamin: ""
                 })
+                window.location.href = "/sign-in"
             })
             .catch((e) => {
                 console.log(e)

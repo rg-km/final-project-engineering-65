@@ -7,6 +7,7 @@ import SignUp from './components/signup-componet/signup.component'
 import Home from './pages/Home';
 import Profil from './pages/Profil';
 import ReadPage from './pages/ReadPage';
+import ReadPagePremium from './pages/ReadPagePremium'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/read-page/:id" element={<ReadPage />} />
         <Route path="/profil" element={<Profil />} />
+        <Route path="/read-page-premium/:premiumid" element={<ReadPagePremium />} />
       </Routes>
     </div>
   )

@@ -9,6 +9,7 @@ import axios from 'axios';
 function User() {
     const profil = JSON.parse(localStorage.getItem('profil'))
     const [data, setData] = useState(null)
+    const [bookData, setBookData] = useState([])
 
     useEffect(() => {
         axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)
@@ -19,6 +20,15 @@ function User() {
         .catch((e) => {
             console.log(e)
         })
+    }, [])
+    
+    useEffect(() => {
+        axios.get(
+            "https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/locked-books/"
+            ).then(res => {
+                setBookData(res.data)
+                console.log(res.data)
+            })
     }, [])
 
     return(
@@ -34,16 +44,8 @@ function User() {
             <h4 className="tukar">Tukarkan Points</h4>
 
             <div className="card-container">
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard />
-                <UnlockCard /><br /><br />
+                <UnlockCard book={bookData} />
+                <br /><br />
             </div>
         </div>
     )

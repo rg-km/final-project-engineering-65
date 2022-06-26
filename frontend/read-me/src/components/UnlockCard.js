@@ -1,20 +1,26 @@
 import React from "react";
-import book2 from "../assets/book2.jpg";
 import { useState } from "react";
 import UnlockModal from "./Modals/UnlockModal";
 
-function Unlock (){
+function Unlock ({book}){
     const [openModal, setOpenModal] = useState(false)
+    const [bookItem,setItem] = useState();
+
     return(
         <>
-            <div className="card" onClick={() => setOpenModal(true)}>
-                <img src={book2} alt=""/>
+        {book.map((item,index)=>{
+            return(
+                <>
+            <div className="card" onClick={() => {setOpenModal(true); setItem(item)}} key={index}>
+                <img src={item.cover} alt=""/>
                 <div className="bottom">
-                    <h3 className="book-title">Will</h3>
+                    <h3 className="book-title">{item.judul}</h3>
                     <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="unlock-button" type="submit">Unlock</button>
                 </div>
             </div>
-            {openModal && <UnlockModal onClose={setOpenModal}/>}
+            {openModal && <UnlockModal item={bookItem} onClose={setOpenModal}/>}
+            </>
+            )})}
         </>
     )
 }

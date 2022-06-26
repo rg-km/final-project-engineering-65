@@ -1,13 +1,14 @@
 import React from "react";
 import './Modal.css';
-import book1 from "../../assets/book1.jpg";
-import logo2 from "../../assets/logo-footer.png";
 import coint from "../../assets/coint.PNG";
 import axios from 'axios';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
+import { useState } from "react";
 
-function UnlockModal({onClose}){
+function UnlockModal({item, onClose}){
+    const [bookPdf, setBookPdf] = useState();
     const profil = JSON.parse(localStorage.getItem('profil'))
+    const readPage = () =>{ window.location.href=`/read-page-premium/${item.id}`}
 
     const tukarPoint = () => {
         axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)
@@ -20,7 +21,8 @@ function UnlockModal({onClose}){
                     point: resData.point - 20
                 })
                 .then((resUpdate) => {
-                    window.location.href = "/read-page"
+                    // window.location.href = "/read-page"
+                    setBookPdf(readPage)
                     localStorage.setItem('profil', JSON.stringify(resUpdate.data))
                 })
                 .catch((eUpdate) => {
@@ -40,24 +42,24 @@ function UnlockModal({onClose}){
             <div className="modalContainer">
                 <button onClick={()=> onClose(false)} className="close"> X </button>
                 <div className="modalImage">
-                    <img src={book1} alt=""/>
+                    <img src={item.cover} alt=""/>
                 </div>
                 
                 <div className="body">
-                    <h5> Judul Buku </h5>
+                    <h5> {item.judul} </h5>
                     <h5 className="coint"><img src={coint} width={28} alt=""/> 20</h5>
 
                     <div className="buttonUnlock">
                         <button type="submit" onClick={tukarPoint}>TUKAR POINT</button>
                     </div>
 
-                    <p> Nama Penulis Buku </p>
-                    <p> Nama Penerbit </p>
-                    <p> Tahun Terbit </p>
+                    <p> {item.penulis} </p>
+                    <p> {item.penerbit} </p>
+                    <p> {item.tahun} </p>
                 </div>
 
                 <div className="bookSynopsis">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed finibus ex dui, a luctus sapien tempus et. Phasellus tincidunt purus sit amet massa congue, et suscipit odio pulvinar. Ut iaculis justo augue, ut lacinia lectus maximus luctus.</p>
+                    <p>{item.sinopsis}</p>
                 </div>
             </div>
         </div>

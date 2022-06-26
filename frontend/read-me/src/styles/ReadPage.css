@@ -4,7 +4,8 @@
     align-items: center;
     height: 800px;
     overflow-y: auto;
-    margin-bottom: 10px;
+    /* margin-bottom: 10px; */
+    background-color: whitesmoke;
 }
 
 
@@ -22,7 +23,7 @@
 
 .under-pdf{
     width: 100%;
-    background-color: whitesmoke;
+    background-color: white;
     height: 50px;
     display: flex;
     align-items: center;

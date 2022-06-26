@@ -10,7 +10,8 @@ function DetailModal({item, onClose}){
 
     let thumbnail = item.cover;
     const [bookPdf, setBookPdf] = useState();
-    const readPage = () =>{ window.location.href='/read-page'}
+    //console.log(item)
+    const readPage = () =>{ window.location.href=`/read-page/${item.id}`}
     return(
         
         <div className="modalBackground">
@@ -26,19 +27,16 @@ function DetailModal({item, onClose}){
                     <p> {item.tahun} </p>
                 </div>
                 <div className="buttonRead">
-                    <button onClick={() => { setBookPdf(readPage)
-                         && <ReadPage item={bookPdf}/>}}><img src={logo2} alt=""/></button>
+                    <button onClick={() => {setBookPdf(readPage) && <ReadPage item={bookPdf}/>}}><img src={logo2} alt=""/></button>
                 
                 </div>
                 <div className="bookSynopsis">
                     <p>{item.sinopsis}</p>
                 </div>
             </div>
-        </div>
-            
+        </div>   
        
     )
 }
 
 export default DetailModal
-

@@ -11,7 +11,7 @@ function Header(){
     
     useEffect(() => {
         axios.get(
-            "https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/books"
+            "https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/books/"
             ).then(res => {
                 setBookData(res.data)
                 // console.log(res.data)

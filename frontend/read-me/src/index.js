@@ -5,6 +5,7 @@ import App from './App';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/css/bootstrap.css"
 import { BrowserRouter } from 'react-router-dom';
+import 'sweetalert2/dist/sweetalert2.css'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -3,8 +3,37 @@ import './Modal.css';
 import book1 from "../../assets/book1.jpg";
 import logo2 from "../../assets/logo-footer.png";
 import coint from "../../assets/coint.PNG";
+import axios from 'axios';
 
 function UnlockModal({onClose}){
+    const profil = JSON.parse(localStorage.getItem('profil'))
+
+    const tukarPoint = () => {
+        axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)
+        .then((res) => {
+            console.log(res)
+            const resData = res.data
+            if (resData.point >= 20) {
+                axios.put(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`, {
+                    ...resData, 
+                    point: resData.point - 20
+                })
+                .then((resUpdate) => {
+                    window.location.href = "/read-page"
+                    localStorage.setItem('profil', JSON.stringify(resUpdate.data))
+                })
+                .catch((eUpdate) => {
+                    console.log(eUpdate)
+                })
+            } else {
+                alert('Point tidak cukup')
+            }
+        })
+        .catch((e) => {
+            console.log(e)
+        })
+    }
+
     return(
         <div className="modalBackground">
             <div className="modalContainer">
@@ -18,7 +47,7 @@ function UnlockModal({onClose}){
                     <h5 className="coint"><img src={coint} width={28} alt=""/> 20</h5>
 
                     <div className="buttonUnlock">
-                        <button>TUKAR POINT</button>
+                        <button type="submit" onClick={tukarPoint}>TUKAR POINT</button>
                     </div>
 
                     <p> Nama Penulis Buku </p>

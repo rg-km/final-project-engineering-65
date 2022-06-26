@@ -1,3 +1,17 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
 :root {
   --primary-color: white;
   --secondary-color: #3EB489;
@@ -14,7 +28,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	/* position: fixed; */
+	position: fixed;
   padding: 5px;
 	left: 0;
 	top: 0;
@@ -34,6 +48,7 @@ nav {
 .quote {
   background-color: whitesmoke;
   font-style: italic;
+  margin-top: 50px;
 }
 
 .searchbar {
@@ -82,7 +97,7 @@ form.form-inline input[type=text] {
 }
 
 .card .bottom .book-title {
-  font-size: 20px;
+  font-size: 16px;
   margin-bottom: 12px;
   border: none;
   background-color: transparent;
@@ -165,7 +180,6 @@ footer {
 }
 
 #point {
-  margin-left: 625px;
   margin-top: 20px;
   margin-bottom: 60px;
 }
@@ -199,6 +213,17 @@ footer {
 #dropdown {
   background-color: var(--secondary-color);
   border: none;
-  margin-left: 700px;
+  margin-left: 500px;
   margin-top: 10px;
+}
+
+#submit {
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border: none;
+  margin-left: 280px;
+}
+
+#link {
+    text-decoration: none;
 }

@@ -4,9 +4,14 @@ import menu from "../assets/bars-solid.svg";
 import { DropdownButton, Dropdown } from "react-bootstrap";
 
 function Navbar(){
+    const logout = () => {
+        localStorage.clear()
+        window.location.href = "/"
+    }
+
     return(
         <nav id="navbar">
-            <a href="#" className="logo">
+            <a href="/" className="logo">
                 <img src={logo2} alt=""/>
             </a>
             <p></p>
@@ -16,7 +21,7 @@ function Navbar(){
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
                     <Dropdown.Item href="/profil">My Account</Dropdown.Item>
-                    <Dropdown.Item href="#/action-2">Logout</Dropdown.Item>
+                    <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
         </nav>

@@ -6,10 +6,11 @@
     top: 0;
     right: 0;
     bottom: 0;
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .modalContainer{
@@ -59,4 +60,23 @@
 .bookSynopsis{
     margin-top: 15px;
     font-size: small;
+}
+
+.buttonUnlock button{
+    outline: none;
+    border: none;
+    background-color: #3EB489;
+    border-radius: 10px;
+    width: 240px;
+    height: 28px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    color: white;
+    font-weight: 600;
+    font-size: 12pt;
+}
+
+.coint {
+    color: var(--tertiary-color);
+    font-weight: 700;
 }

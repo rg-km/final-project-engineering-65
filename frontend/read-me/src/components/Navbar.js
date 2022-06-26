@@ -8,7 +8,7 @@ function Navbar(){
             <a href="#" className="logo">
                 <img src={logo2} alt=""/>
             </a>
-            <button type="button" className="btn" id="login">Login</button>
+            <button type="button" className="btn" id="login" onClick={() => window.location.href="/sign-in"}>Login</button>
         </nav>
     )
 }

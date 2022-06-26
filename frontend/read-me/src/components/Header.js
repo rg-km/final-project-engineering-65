@@ -22,7 +22,7 @@ function Header(){
         <div id="main">
 
             {/* quote section */}
-            <section className="pt-1 quote">
+            <section className="pt-4 quote">
             <RandomQuote/>
             </section>
 
@@ -47,7 +47,7 @@ function Header(){
 
             <div className="ctg">
                 <p></p>
-                <h2 className="info-2">100 Books in 5 Categories</h2>
+                <h2 className="info-2">10 Books in 5 Categories</h2>
                 <button type="button" className="btn" id="seeCtg">See All</button>
             </div>
 

@@ -11,7 +11,7 @@ function Navbar(){
 
     return(
         <nav id="navbar">
-            <a href="#" className="logo">
+            <a href="/" className="logo">
                 <img src={logo2} alt=""/>
             </a>
             <p></p>

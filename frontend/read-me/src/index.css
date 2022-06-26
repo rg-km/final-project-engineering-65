@@ -28,7 +28,7 @@ nav {
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
-	/* position: fixed; */
+	position: fixed;
   padding: 5px;
 	left: 0;
 	top: 0;
@@ -48,6 +48,7 @@ nav {
 .quote {
   background-color: whitesmoke;
   font-style: italic;
+  margin-top: 50px;
 }
 
 .searchbar {
@@ -179,7 +180,6 @@ footer {
 }
 
 #point {
-  margin-left: 625px;
   margin-top: 20px;
   margin-bottom: 60px;
 }
@@ -213,7 +213,7 @@ footer {
 #dropdown {
   background-color: var(--secondary-color);
   border: none;
-  margin-left: 700px;
+  margin-left: 500px;
   margin-top: 10px;
 }
 

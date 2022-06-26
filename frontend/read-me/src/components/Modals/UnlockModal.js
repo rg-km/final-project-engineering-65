@@ -4,6 +4,7 @@ import book1 from "../../assets/book1.jpg";
 import logo2 from "../../assets/logo-footer.png";
 import coint from "../../assets/coint.PNG";
 import axios from 'axios';
+import Swal from 'sweetalert2/dist/sweetalert2.js'
 
 function UnlockModal({onClose}){
     const profil = JSON.parse(localStorage.getItem('profil'))
@@ -26,7 +27,7 @@ function UnlockModal({onClose}){
                     console.log(eUpdate)
                 })
             } else {
-                alert('Point tidak cukup')
+                Swal.fire('Point Anda Tidak Cukup')
             }
         })
         .catch((e) => {

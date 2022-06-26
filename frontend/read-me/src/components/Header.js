@@ -8,6 +8,7 @@ import axios from 'axios';
 
 function Header(){
     const [bookData, setBookData] = useState([])
+    const [searchTerm, setSearchTerm] = useState("")
     
     useEffect(() => {
         axios.get(
@@ -17,7 +18,15 @@ function Header(){
                 // console.log(res.data)
             })
     }, [])
-    
+
+    function onSearch(e){
+        e.preventDefault()
+        axios.get(
+            "https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/books?search=" + searchTerm
+        ).then((res) => {
+            setBookData(res.data)
+        })
+    }
     return(
         <div id="main">
 
@@ -30,8 +39,10 @@ function Header(){
             <div className="container search">
                 <div className="d-flex justify-content-center">
                     <div className="searchbar">
-                        <form className="form-inline md-form mr-auto mb-4">
-                        <input className="search_input " type="text" name="" placeholder="CARI BUKU"/>
+                        <form className="form-inline md-form mr-auto mb-4" onSubmit={onSearch}>
+                        <input className="search_input " type="text" name="" placeholder="CARI BUKU" onChange={e => {
+                            setSearchTerm(e.target.value)
+                        }}/>
                         <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="src-button" type="submit">Search</button>
                         </form>
                     </div>

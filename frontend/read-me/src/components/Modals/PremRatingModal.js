@@ -11,22 +11,23 @@ const colors = {
     grey: "#788896"
 }
 
-function RatingModal({onClose}) {
+function PremRatingModal({onClose}) {
     const stars = Array(5).fill(0);
     const [currentValue, setCurrentValue] = React.useState(0);
     const [hoverValue, setHoverValue] = React.useState(undefined);
     const [openModal, setOpenModal] = useState(false)
     const [bookPdf, setBookPdf] = useState(null)
-    let {id} = useParams()
-    useEffect( () =>{
+    let {premiumid} = useParams()
+	console.log(bookPdf)
+	useEffect( () =>{
 		axios.get(
-			"https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/books/" + id
+			"https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/locked-books/" + premiumid
 		).then((res) =>{
 			setBookPdf(res.data)
 		}).catch((e) => {
 			console.log(e)
 		})
-	}, [id] ) 
+	}, [premiumid] ) 
 
 
     const profil = JSON.parse(localStorage.getItem('profil'))
@@ -124,4 +125,4 @@ const styles = {
     },
 }
 
-export default RatingModal;
+export default PremRatingModal;

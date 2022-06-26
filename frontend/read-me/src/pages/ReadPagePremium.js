@@ -3,7 +3,7 @@ import '@react-pdf-viewer/core/lib/styles/index.css';
 import '../styles/ReadPage.css'
 import Navbar from '../components/NavbarProfil';
 import { Button } from 'react-bootstrap';
-import RatingModal from "../components/Modals/RatingModal";
+import PremRatingModal from '../components/Modals/PremRatingModal';
 import axios from 'axios';
 import { useParams } from 'react-router-dom'
 
@@ -48,7 +48,7 @@ export default function ReadPagePremium() {
 				}
 			>Next</Button>
 		</div>
-		{openModal && <RatingModal onClose={setOpenModal}/>}
+		{openModal && <PremRatingModal onClose={setOpenModal}/>}
 		</section>
 		</>
 	);

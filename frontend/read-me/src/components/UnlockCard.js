@@ -14,8 +14,8 @@ function Unlock ({book}){
             <div className="card" onClick={() => {setOpenModal(true); setItem(item)}} key={index}>
                 <img src={item.cover} alt=""/>
                 <div className="bottom">
-                    <h3 className="book-title">{item.judul}</h3>
-                    <button className="btn btn-outline-warning btn-rounded btn-sm my-0" id="unlock-button" type="submit">Unlock</button>
+                    <h3 className="pt-3 book-title">{item.judul}</h3>
+                    <button className="mt-1 btn btn-outline-warning btn-rounded btn-sm my-0" id="unlock-button" type="submit">Unlock</button>
                 </div>
             </div>
             {openModal && <UnlockModal item={bookItem} onClose={setOpenModal}/>}

@@ -23,7 +23,7 @@ function Card ({book}){
                 <div className="card" onClick={() => {getDetail() ; setItem(item)}} key={index} >
                     <img src={item.cover} alt="" />
                     <div className="bottom">
-                        <button className="book-title">{item.judul}</button> 
+                        <button className="pt-3 book-title">{item.judul}</button> 
                     </div>
                 </div>
                 {openModal && <DetailModal item={bookItem}  onClose={setOpenModal}/>}

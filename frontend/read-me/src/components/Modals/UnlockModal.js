@@ -47,7 +47,7 @@ function UnlockModal({item, onClose}){
                 
                 <div className="body">
                     <h5> {item.judul} </h5>
-                    <h5 className="coint"><img src={coint} width={28} alt=""/> 20</h5>
+                    <h5 className="pt-2 coint"><img src={coint} width={28} alt=""/> 20</h5>
 
                     <div className="buttonUnlock">
                         <button type="submit" onClick={tukarPoint}>TUKAR POINT</button>

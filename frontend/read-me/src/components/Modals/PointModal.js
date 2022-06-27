@@ -16,7 +16,7 @@ function PointModal({onClose}){
                 </div>
 
                 <div className="p-buttonRead">
-                    <button>NEXT</button>
+                    <button onClick={() => window.location.href="/"}>NEXT</button>
                 </div>
             </div>
         </div>

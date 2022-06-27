@@ -44,11 +44,11 @@ function SignUp() {
         <div className='container kotak'>
             <div className='row'>
                 <div className='col-12 ps-1 pt-2'>
-                    <img src={logo} width="150" />
+                    <a href='/'><img src={logo} width="150" /></a>
                 </div>
             </div>
 
-            <div className='row d-flex pt-5 justify-content-center'>
+            <div className='row d-flex pt-4 justify-content-center'>
             <div className='col-9'>
             <form className="formlogin Buat Akun" method='post' onSubmit={registration}>
                 <h3 className='mb-2'>Buat Akun</h3>

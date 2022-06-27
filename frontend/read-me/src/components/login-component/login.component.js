@@ -42,7 +42,7 @@ function Login() {
     <div className='container kotak'>
         <div className='row'>
             <div className='col-12 ps-1 pt-2'>
-                <img src={logo} width="150" />
+                <a href='/'><img src={logo} width="150" /></a>
             </div>
         </div>
     

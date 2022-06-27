@@ -1,9 +1,11 @@
 import React, { useState, Component, setDate } from 'react'
 import logo from '../../images/logo2.png'
 import axios, { Axios } from 'axios'
+import { useNavigate, Link } from "react-router-dom";
 
 
 function SignUp() {
+    const navigate = useNavigate()
     const [data, setData] = useState({
         email: "",
         password: "",
@@ -29,7 +31,7 @@ function SignUp() {
                     tgl_lahir: "",
                     jenis_kelamin: ""
                 })
-                window.location.href = "/sign-in"
+                navigate("/sign-in")
             })
             .catch((e) => {
                 console.log(e)
@@ -44,7 +46,7 @@ function SignUp() {
         <div className='container kotak'>
             <div className='row'>
                 <div className='col-12 ps-1 pt-2'>
-                    <a href='/'><img src={logo} width="150" /></a>
+                <Link to='/'><img src={logo} width="150" /></Link>
                 </div>
             </div>
 
@@ -121,7 +123,7 @@ function SignUp() {
 
                 <div className="d-flex justify-content-end align-items-center mb-4">
                     <h6 className="forgot-password pt-2 pe-4">
-                        Sudah ada akun? <a href="/sign-in" id="link">Log in</a>
+                        Sudah ada akun? <Link to="/sign-in" id="link">Log in</Link>
                     </h6>
                     <button type="submit" className="btn btn-success px-4">
                         Daftar

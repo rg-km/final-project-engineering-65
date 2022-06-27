@@ -5,13 +5,15 @@ import book1 from "../../assets/book1.jpg";
 import { useState, useEffect } from "react";
 import logo2 from "../../assets/logo-footer.png";
 import ReadPage from "../../pages/ReadPage";
+import { useNavigate } from "react-router-dom";
 
 function DetailModal({item, onClose}){
 
     let thumbnail = item.cover;
     const [bookPdf, setBookPdf] = useState();
     //console.log(item)
-    const readPage = () =>{ window.location.href=`/read-page/${item.id}`}
+    const navigate = useNavigate();
+    const readPage = () =>{ navigate(`/read-page/${item.id}`)}
     return(
         
         <div className="modalBackground">

@@ -2,25 +2,31 @@ import React from "react";
 import logo2 from "../assets/logo2.png";
 import menu from "../assets/bars-solid.svg";
 import { DropdownButton, Dropdown } from "react-bootstrap";
+import { useNavigate, Link } from "react-router-dom";
 
 function Navbar(){
+    const navigate = useNavigate();
     const logout = () => {
         localStorage.clear()
-        window.location.href = "/"
+        navigate("/")
     }
+
+    
 
     return(
         <nav id="navbar">
-            <a href="/" className="logo">
+            <Link to="/" className="logo">
                 <img src={logo2} alt=""/>
-            </a>
+            </Link>
             <p></p>
             <Dropdown>
                 <Dropdown.Toggle className="d-block" id="dropdown">
                     <img src={menu} class="menu-burger" alt=""/>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                    <Dropdown.Item href="/profil">My Account</Dropdown.Item>
+                    <Dropdown.Item>
+                    <Link to="/profil" style={{textDecoration: 'none', color:'black'}}> My Account </Link>
+                        </Dropdown.Item>
                     <Dropdown.Item onClick={logout}>Logout</Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>

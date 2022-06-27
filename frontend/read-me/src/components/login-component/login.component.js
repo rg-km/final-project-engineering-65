@@ -2,8 +2,10 @@ import React, { useState } from 'react'
 import image2 from '../../images/read-books.png'
 import logo from '../../images/logo2.png'
 import axios from 'axios'
+import { useNavigate, Link } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate()
   const [data, setData] = useState({
     email: "",
     password: ""
@@ -27,7 +29,7 @@ function Login() {
           })
           localStorage.setItem('profil', JSON.stringify(result))
           localStorage.setItem('token', `token-${result.id}`)
-          window.location.href="/"
+         navigate("/")
         } else {
           alert('akun tidak terdaftar')
         }
@@ -42,7 +44,7 @@ function Login() {
     <div className='container kotak'>
         <div className='row'>
             <div className='col-12 ps-1 pt-2'>
-                <a href='/'><img src={logo} width="150" /></a>
+            <Link to="/"><img src={logo} width="150" /></Link>
             </div>
         </div>
     
@@ -52,7 +54,7 @@ function Login() {
         <div className="auth-inner">
           <form className='formlogin'  method='post' onSubmit={masuk}>
             <h3 className='mb-2'>Log In</h3>
-            <h6 className='mb-4 text-dark'>Belum ada akun? <a href='/sign-up' id="link">Daftar</a></h6>
+            <h6 className='mb-4 text-dark'>Belum ada akun? <Link to='/sign-up' id="link">Daftar</Link></h6>
             <div className="mb-4">
               <input
                 onChange={e => {

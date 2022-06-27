@@ -8,6 +8,7 @@ import Home from './pages/Home';
 import Profil from './pages/Profil';
 import ReadPage from './pages/ReadPage';
 import ReadPagePremium from './pages/ReadPagePremium'
+import NotFound from './pages/NotFound'
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/read-page/:id" element={<ReadPage />} />
         <Route path="/profil" element={<Profil />} />
         <Route path="/read-page-premium/:premiumid" element={<ReadPagePremium />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

@@ -4,11 +4,13 @@ import coint from "../../assets/coint.PNG";
 import axios from 'axios';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function UnlockModal({item, onClose}){
     const [bookPdf, setBookPdf] = useState();
     const profil = JSON.parse(localStorage.getItem('profil'))
-    const readPage = () =>{ window.location.href=`/read-page-premium/${item.id}`}
+    const navigate = useNavigate();
+    const readPage = () =>{ navigate(`/read-page-premium/${item.id}`)}
 
     const tukarPoint = () => {
         axios.get(`https://62b638f842c6473c4b40ff48.mockapi.io/api/read-me/users/${profil?.id}`)

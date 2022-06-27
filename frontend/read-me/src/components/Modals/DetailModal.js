@@ -1,8 +1,6 @@
 import React from "react";
-import './Modal.css';
-import axios from "axios";
-import book1 from "../../assets/book1.jpg";
-import { useState, useEffect } from "react";
+import '../../styles/Modal.css';
+import { useState } from "react";
 import logo2 from "../../assets/logo-footer.png";
 import ReadPage from "../../pages/ReadPage";
 import { useNavigate } from "react-router-dom";
@@ -16,9 +14,10 @@ function DetailModal({item, onClose}){
     const readPage = () =>{ navigate(`/read-page/${item.id}`)}
     return(
         
-        <div className="modalBackground">
+        <div className="modalBackground1">
             <div className="modalContainer">
                 <button onClick={()=> onClose(false)} className="close"> X </button>
+
                 <div className="modalImage">
                     <img src={thumbnail} alt=""/>
                 </div>

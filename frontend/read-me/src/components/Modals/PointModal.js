@@ -1,13 +1,12 @@
 import React from "react";
-import './PointModal.css';
-// import book1 from "../../assets/book1.jpg";
+import '../../styles/PointModal.css';
 import logo from "../../images/10 point.png";
 import { useNavigate } from "react-router-dom";
 
 function PointModal({onClose}){
     const navigate = useNavigate();
     return(
-        <div className="modalBackground">
+        <div className="modalBackground1">
             <div className="p-modalContainer">
                 <button onClick={() => navigate("/profil")} className="close"> X </button>
                 

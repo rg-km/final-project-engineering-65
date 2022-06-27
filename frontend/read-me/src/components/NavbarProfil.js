@@ -5,13 +5,10 @@ import { DropdownButton, Dropdown } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
 
 function Navbar(){
-    const navigate = useNavigate();
     const logout = () => {
         localStorage.clear()
-        navigate("/")
+        window.location.href = "/"
     }
-
-    
 
     return(
         <nav id="navbar">

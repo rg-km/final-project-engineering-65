@@ -1,17 +1,18 @@
 import React from "react";
 import { useState } from "react";
 import DetailModal from "./Modals/DetailModal";
+import { useNavigate } from "react-router-dom";
 //import { Modal } from 'react-bootstrap';
 
-
 function Card ({book}){
+    const navigate = useNavigate()
     const [openModal, setOpenModal] = useState(false)
     const [bookItem,setItem] = useState();
     const getDetail = () => {
         if (localStorage.getItem('token') != null) {
             setOpenModal(true)
         } else {
-            window.location.href = "/sign-in"
+            navigate("/sign-in")
         }
     }
 

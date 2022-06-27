@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { FaStar } from "react-icons/fa";
-import book1 from "../../assets/book1.jpg";
-import './Modal.css';
+import '../../styles/Modal.css';
 import PointModal from "./PointModal";
 import axios from 'axios';
 import { useParams } from 'react-router-dom'

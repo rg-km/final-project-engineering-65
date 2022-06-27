@@ -1,5 +1,5 @@
 import React from "react";
-import './Modal.css';
+import '../../styles/Modal.css';
 import coint from "../../assets/coint.PNG";
 import axios from 'axios';
 import Swal from 'sweetalert2/dist/sweetalert2.js'
@@ -40,7 +40,7 @@ function UnlockModal({item, onClose}){
     }
 
     return(
-        <div className="modalBackground">
+        <div className="modalBackground1">
             <div className="modalContainer">
                 <button onClick={()=> onClose(false)} className="close"> X </button>
                 <div className="modalImage">
